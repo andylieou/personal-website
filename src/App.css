@@ -1,0 +1,98 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #000000, #001c08); 
+    display: flex;
+    align-items: center;
+    color: #ffffff; 
+  }
+
+.Top {
+    margin: 35px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    justify-content: center;
+    display: block;
+    align-items: center;
+    color: white;
+    max-width: 600px;
+    height: 500px;
+}
+
+.Intro {
+    font-size: 50px;
+}
+
+.Andy {
+    margin: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    display: block;
+    align-items: center;
+    color: white;
+    max-width: 600px;
+}
+
+.Title {
+    margin: 15px;
+    color: white;
+}
+
+.Projects {
+    margin: 25px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
+}
+
+.Experiences {
+    margin: 25px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    display: grid;
+    gap: 10px; 
+    max-width: 600px;
+}
+  
+nav {
+    background-color: transparent; /* Set the background color */
+    text-align: center; /* Center the content horizontally */
+    display: flex;
+    color: #e6e6e6;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #e6e6e6;
+  }
+  
+  li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 15px;
+    color: #e6e6e6;
+  }
+  
+a {
+    text-decoration: none !important; /* Remove underline */
+    color: #bbbbbb !important; /* Set the text color */
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px; /* Add padding to mimic button appearance */
+    border: 2px solid #fff; /* Add border for a button-like appearance */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transition effects */
+  }
+  
+  
+  a:hover {
+    background-color: rgb(49, 71, 64); /* Change background color on hover */
+    color: rgb(255, 255, 255) !important; /* Change text color on hover */
+  }
