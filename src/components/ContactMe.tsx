@@ -4,22 +4,22 @@ function ContactMe() {
   const socialMediaData = [
     {
       name: "GitHub",
-      logo: "github-logo.png",
+      logo: "https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png",
       link: "https://github.com/andylieou",
     },
     {
       name: "Twitter",
-      logo: "twitter-logo.png",
+      logo: "https://www.phoronix.net/image.php?id=2023&image=twitter_x",
       link: "https://twitter.com/andylieou",
     },
     {
       name: "LinkedIn",
-      logo: "linkedin-logo.png",
+      logo: "https://cdn3.iconfinder.com/data/icons/2018-social-media-black-and-white-logos/1000/2018_social_media_popular_app_logo_linkedin-512.png",
       link: "http://www.linkedin.com/in/andy-lieou-165a85268",
     },
     {
         name: "Gmail",
-        logo: "gmail-logo.png",
+        logo: "https://cdn.icon-icons.com/icons2/652/PNG/512/gmail_icon-icons.com_59877.png",
         link: "mailto:andylieou@gmail.com",
       },
   ];
@@ -34,7 +34,7 @@ function ContactMe() {
             rel="noopener noreferrer"
           >
             <img
-              src={`src/components/images/social-logos/${platform.logo}`}
+              src={platform.logo}
               alt={`${platform.name} Logo`}
             />
           </a>
