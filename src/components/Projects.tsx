@@ -1,9 +1,12 @@
 import React from 'react';
 import Placeholder from "./Placeholder";
+import TypingAnimation from './TypingAnimation';
 
 function Projects() {
     return (<>
-        <h1 className="Title">Projects</h1>
+        <div className = "Header">
+        <TypingAnimation write = "Projects"/>
+        </div>
         <div className="Projects">
           <Placeholder
             title="System Emulator"
@@ -78,6 +81,7 @@ function Projects() {
             color="#ffffff"
           />
         </div>
+        <p className = "AddText"> For more technical descriptions of the projects listed above, please contact me directly using the links at the bottom of this page. </p>
     </>);
 }
 

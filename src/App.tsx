@@ -1,21 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./App.css";
 import AboutMe from "./components/AboutMe";
+import ContactMe from "./components/ContactMe";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
 import TypingAnimation from "./components/TypingAnimation";
 
 function App() {
   const [activeTab, setActiveTab] = useState("AboutMe");
+  const scrollRef = useRef<HTMLDivElement>(null); // Specify the type here
 
   const handleTabClick = (tabName: string) => {
     setActiveTab(tabName);
   };
 
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [activeTab]);
+
   return (
     <>
       <div className="Top">
-        <TypingAnimation />
+        <TypingAnimation write="Hi, I'm Andy Lieou." />
       </div>
       <nav>
         <ul>
@@ -36,9 +44,12 @@ function App() {
           </li>
         </ul>
       </nav>
-      {activeTab === "AboutMe" && <AboutMe />}
-      {activeTab === "Projects" && <Projects />}
-      {activeTab === "Experiences" && <Experiences />}
+      <div ref={scrollRef}>
+        {activeTab === "AboutMe" && <AboutMe />}
+        {activeTab === "Projects" && <Projects />}
+        {activeTab === "Experiences" && <Experiences />}
+      </div>
+      <ContactMe />
     </>
   );
 }

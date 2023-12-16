@@ -44,7 +44,7 @@ const Placeholder = ({
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{text}</p>
         <p className="card-text">{keys}</p>
-        <a href="#" className={isHovered ? "btn btn-outline-light" : "btn btn-outline-dark"} onClick={handleButtonClick}>
+        <a href="#" className={isHovered ? "btn btn-outline-light card-button" : "btn btn-outline-dark card-button"} onClick={handleButtonClick}>
           Learn More
         </a>
       </div>

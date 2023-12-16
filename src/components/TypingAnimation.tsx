@@ -2,9 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import './TypingAnimation.css';
 
-const TypingAnimation = () => {
+interface TypingAnimationProps {
+  write: string;
+}
+
+const TypingAnimation: React.FC<TypingAnimationProps> = ({ write }) => {
   const [text, setText] = useState('');
-  const typingText = 'Hi, I\'m Andy Lieou.';
+  const typingText = write;
 
   useEffect(() => {
     let index = 0;
@@ -19,7 +23,7 @@ const TypingAnimation = () => {
     }, 100);
 
     return () => clearInterval(typingInterval);
-  }, []);
+  }, [typingText]);
 
   return (
     <div className="typing-text">
