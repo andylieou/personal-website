@@ -44,7 +44,7 @@ function Projects() {
             title="Memory Allocator"
             text="An implementation of the C methods malloc() and free() from scratch."
             keys="C, LinkedLists"
-            link=""
+            link="https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/"
             image="https://www.researchgate.net/publication/280056684/figure/fig3/AS:376707094728706@1466825378246/Memory-array-architecture.png"
             color="#ffffff"
           />
@@ -52,7 +52,7 @@ function Projects() {
             title="Trello Recreation"
             text="A recreation of the website Trello with the key features, including creating boards, adding/deleting cards, and moving cards between boards."
             keys="HTML, Javascript, CSS"
-            link=""
+            link="https://trello.com"
             image="https://pbs.twimg.com/profile_images/1361722806694785027/UY7DlO0a_400x400.png"
             color="#2684FF"
           />
@@ -76,7 +76,7 @@ function Projects() {
             title="Personal Website"
             text="This self-made website houses key information about myself and my past work."
             keys="TypeScript, React.js, HTML, CSS"
-            link=""
+            link="https://github.com/andylieou/personal-website"
             image="https://static.vecteezy.com/system/resources/thumbnails/021/958/059/small/simple-computer-laptop-isolated-png.png"
             color="#ffffff"
           />
