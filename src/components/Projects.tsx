@@ -22,7 +22,7 @@ function Projects() {
             text="x86-32 based kernel that supports preemptive multithreading, an ext2 file system, virtual memory, and ELF executables"
             keys="C++, C, x86 Assembly, ELF Executables"
             link="https://wiki.osdev.org/Expanded_Main_Page"
-            image="src/components/images/kernel.png"
+            image="https://media.istockphoto.com/id/1328306485/vector/upgrade-of-software-line-icon-computer-system-update-linear-pictogram-download-process-icon.jpg?s=612x612&w=0&k=20&c=LT_vOXGJH6ihpS05imCSr42nxl0KG4EOl-iC3t7O9pY="
             color="#ffffff"
           />
           <Placeholder
