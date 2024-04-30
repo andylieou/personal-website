@@ -14,7 +14,7 @@ function AboutMe() {
       <p>
         I have a strong foundation in Mathematics, Statistics, and Object-Oriented Programming. 
         I am proficient in Java, C, C++, and R. I am experienced with HTML, CSS, JavaScript, TypeScript,
-        Python, Arm64 Assembly, x86 Assembly, React, and Git. 
+        Python, AArch64, x86 Assembly, React, and Git. 
       </p>
     </div>
   </>);
