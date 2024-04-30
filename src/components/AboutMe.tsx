@@ -8,13 +8,14 @@ function AboutMe() {
     </div>
     <div className = "Experiences">
       <p>
-          I am a student at the University of Texas at Austin pursuing a BSA
-          in Computer Science with a certificate in Applied Statistical
-          Modeling. I have a foundation in Mathematics, Statistics, and
-          Object-Oriented Programming. I am proficent in Java and C and
-          experienced with HTML, CSS, JavaScript, TypeScript, Python, C++,
-          Arm64 Assembly, React, Git and R.
-        </p>
+        I am a student at the University of Texas at Austin pursuing a BSA in Computer Science 
+        and a certificate in Applied Statistical Modeling. 
+      </p>
+      <p>
+        I have a strong foundation in Mathematics, Statistics, and Object-Oriented Programming. 
+        I am proficient in Java, C, C++, and R. I am experienced with HTML, CSS, JavaScript, TypeScript,
+        Python, Arm64 Assembly, x86 Assembly, React, and Git. 
+      </p>
     </div>
   </>);
 }

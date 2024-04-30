@@ -15,11 +15,12 @@ function App() {
   };
 
   useEffect(() => {
-    if (scrollRef.current) {
+    // Check if it's not the initial render
+    if (scrollRef.current && activeTab !== "AboutMe") {
       scrollRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [activeTab]);
-
+  
   return (
     <>
       <div className="Top">

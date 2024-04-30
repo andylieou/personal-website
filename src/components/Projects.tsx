@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
 import Placeholder from "./Placeholder";
 import TypingAnimation from './TypingAnimation';
 
 function Projects() {
+    const firstDivRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      // Scroll to the beginning of the first div with class name "Experiences" when component mounts
+      if (firstDivRef.current) {
+        firstDivRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, []);
+    
     return (<>
         <div className = "Header">
         <TypingAnimation write = "Projects"/>
         </div>
         <div className="Projects">
+          <Placeholder
+            title="OS Kernel"
+            text="x86-32 based kernel that supports preemptive multithreading, an ext2 file system, virtual memory, and ELF executables"
+            keys="C++, C, x86 Assembly, ELF Executables"
+            link="https://wiki.osdev.org/Expanded_Main_Page"
+            image="src/components/images/kernel.png"
+            color="#ffffff"
+          />
           <Placeholder
             title="System Emulator"
             text="A C-based instruction processor that used a pipelining approach with a two-level memory hierarchy to simulate the role of the CPU."

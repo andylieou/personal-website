@@ -1,19 +1,44 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import TypingAnimation from "./TypingAnimation";
 
 function Experiences() {
+
+  const firstDivRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Scroll to the beginning of the first div with class name "Experiences" when component mounts
+    if (firstDivRef.current) {
+      firstDivRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <>
       <div className="Header">
         <TypingAnimation write="Experiences" />
       </div>
-      <div className="Experiences">
-        <h3>Tech Consultant</h3>
-        <p>Target : Austin, Texas : Apr 2023 - Present</p>
+      <div className="Experiences"> 
+        <h3>Relevant Coursework</h3>
+        <p> 
+          Principles of Computer Systems (OS),
+          Computer Organization and Architecture,
+          Object-Oriented Programming,
+          Discrete Mathematics,
+          Data Structures, 
+          Introduction to Programming
+        </p>
         <p>
-          Assisted guests by providing information on the latest technology,
-          setting up phones, and solving electronic-related issues. Learned
-          communication skills, time management, and customer service.
+          Elements of Regression Analysis,
+          Introduction to Probability and Statistics,
+          Elements of Statistics
+        </p>
+      </div>
+      <div className="Experiences">
+        <h1> Work Experiences </h1>
+        <h3>Software Development Intern</h3>
+        <p>Expedia : Seattle, Washington : June 2024 - Aug 2024</p>
+        <p>
+          Coming Soon!
         </p>
         <h3>Undergraduate Course Assistant</h3>
         <p>
