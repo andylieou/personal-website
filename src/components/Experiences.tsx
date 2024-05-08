@@ -36,7 +36,7 @@ function Experiences() {
       <div className="Experiences">
         <h1> Work Experiences </h1>
         <h3>Software Development Intern</h3>
-        <p>Expedia : Seattle, Washington : June 2024 - Aug 2024</p>
+        <p>Expedia Group : Seattle, Washington : June 2024 - Aug 2024</p>
         <p>
           Coming Soon!
         </p>
