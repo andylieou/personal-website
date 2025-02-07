@@ -19,7 +19,7 @@ function ContactMe() {
     },
     {
         name: "Gmail",
-        logo: "https://cdn.icon-icons.com/icons2/652/PNG/512/gmail_icon-icons.com_59877.png",
+        logo: "https://openclipart.org/image/800px/216530",
         link: "mailto:andylieou@gmail.com",
       },
   ];
