@@ -38,7 +38,24 @@ function Experiences() {
         <h3>Software Development Intern</h3>
         <p>Expedia Group : Seattle, Washington : June 2024 - Aug 2024</p>
         <p>
-          Coming Soon!
+          Led the end-to-end migration of VRBO's booking request flow from a legacy
+          platform to a modern architecture, utilizing REST APIs, TypeScript, React, 
+          and GraphQL. Spearheaded the development and integration of user 
+          interfaces and optimized data retrieval systems, enhancing booking 
+          functionality and system performance through comprehensive full-stack 
+          development, including a complete backend redesign and frontend upgrade.
+        </p>
+        <h3>Undergraduate Course Assistant</h3>
+        <p>
+          University of Texas at Austin : Austin, Texas : Aug 2023 - Present
+        </p>
+        <p>
+          Conducted accessible office hours, offering personalized assistance 
+          to Computer Architecture students with coding assignments, fostering a 
+          collaborative learning environment. Actively participated in lectures and 
+          led weekly discussions, addressing coding-related questions and 
+          contributing to the overall learning experience. Delivered constructive 
+          feedback on coding assignments and exams, emphasizing effective communication.
         </p>
         <h3>Undergraduate Course Assistant</h3>
         <p>
