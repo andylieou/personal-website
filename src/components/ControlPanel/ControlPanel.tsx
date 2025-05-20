@@ -14,7 +14,16 @@ import Projects from "../Projects/Projects";
 
 const Buttons = () => {
     return (
-        <div className="panel">
+        <div
+            className="panel"
+            style={{
+                display: "grid",
+                gridTemplateColumns:
+                    "repeat(auto-fit, minmax(200px, 1fr))",
+                gap: "16px",
+                padding: "16px",
+            }}
+        >
             <ControlPanelButton title="Home" page="/" />
             <ControlPanelButton title="About Me" page="/about-me" />
             <ControlPanelButton title="Projects" page="/projects" />
