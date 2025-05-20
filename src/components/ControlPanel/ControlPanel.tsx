@@ -1,7 +1,13 @@
 import React from "react";
-import {BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import ControlPanelButton from "./ControlPanelButton";
 import HomePage from "../HomePage/HomePage";
+import RollingImage from "../RollingImage/RollingImage";
 
 const Buttons = () => {
   return (
@@ -26,7 +32,7 @@ const Panel = () => {
         <Route path="/" element={<HomePage />}></Route>
       </Routes>
       {onHomePage && <Buttons />}
-      
+      {onHomePage && <RollingImage />}
     </>
   );
 };
