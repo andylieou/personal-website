@@ -1,0 +1,19 @@
+.control-button {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 20%;
+    height: 40px;
+    text-align: center;
+    font-family: monospace;
+    background-color: transparent;
+}
+
+.control-button:hover {
+    border: 2px solid black;
+}
+
+.panel {
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+}
