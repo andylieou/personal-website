@@ -3,13 +3,13 @@ import TypingAnimation from "../Elements/TypingAnimation";
 import "./HomePage.css";
 
 const HomePage = () => {
-  return (
-    <>
-      <div className="container">
-        <TypingAnimation write="Hi! I'm Andy Lieou" />
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div className="container">
+                <TypingAnimation write="Hi! I'm Andy Lieou" />
+            </div>
+        </>
+    );
 };
 
 export default HomePage;
