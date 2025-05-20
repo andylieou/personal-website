@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import ControlPanelButton from "./ControlPanelButton";
 import HomePage from "../HomePage/HomePage";
-import RollingImage from "../RollingImage/RollingImage";
+import RollingImage from "../Elements/RollingImage";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 
 const Buttons = () => {

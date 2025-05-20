@@ -1,5 +1,5 @@
 import React from "react";
-import TypingAnimation from "../TypingAnimation/TypingAnimation";
+import TypingAnimation from "../Elements/TypingAnimation";
 import "./HomePage.css";
 
 const HomePage = () => {
