@@ -44,11 +44,11 @@ const RollingImage = () => {
           style={{
             position: "absolute",
             top: "0",
-            // the image can go off the left side, but stops on the right side 
+            // the image can go off the left side, but stops on the right side
             // feature? bug? who knows?
             right: `${scrollLeft}px`,
             width: "250px",
-            cursor: "pointer"
+            cursor: "pointer",
           }}
           alt="milo"
           onClick={() => window.open("https://milothedog.com", "_blank")}

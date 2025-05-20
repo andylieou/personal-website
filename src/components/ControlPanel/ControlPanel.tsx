@@ -8,6 +8,7 @@ import {
 import ControlPanelButton from "./ControlPanelButton";
 import HomePage from "../HomePage/HomePage";
 import RollingImage from "../RollingImage/RollingImage";
+import NotFoundPage from "../NotFoundPage/NotFoundPage";
 
 const Buttons = () => {
   return (
@@ -30,6 +31,7 @@ const Panel = () => {
       {!onHomePage && <Buttons />}
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       {onHomePage && <Buttons />}
       {onHomePage && <RollingImage />}
