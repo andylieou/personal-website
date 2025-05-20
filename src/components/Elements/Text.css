@@ -1,7 +1,7 @@
 .centered-text-body {
     color: black;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0px;
     padding: 8px;
     font-family: monospace;
@@ -10,7 +10,7 @@
 .text-body {
     color: black;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0px;
     padding: 8px;
     font-family: monospace;
