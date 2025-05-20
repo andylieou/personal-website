@@ -9,7 +9,6 @@ const RollingImage = () => {
         if (!container) return;
 
         const handleScroll = () => {
-            console.log("scrollLeft:", container.scrollLeft);
             setScrollLeft(container.scrollLeft);
         };
 
