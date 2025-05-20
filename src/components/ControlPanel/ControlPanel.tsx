@@ -10,6 +10,7 @@ import HomePage from "../HomePage/HomePage";
 import RollingImage from "../Elements/RollingImage";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import AboutMe from "../AboutMe/AboutMe";
+import Projects from "../Projects/Projects";
 
 const Buttons = () => {
     return (
@@ -33,6 +34,7 @@ const Panel = () => {
             <Routes>
                 <Route path="/" element={<HomePage />}></Route>
                 <Route path="/about-me" element={<AboutMe />}></Route>
+                <Route path="/projects" element={<Projects />}></Route>
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
             {onHomePage && <Buttons />}
