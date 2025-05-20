@@ -5,13 +5,6 @@ const RollingImage = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
 
   useEffect(() => {
-    document.body.style.overflowY = "hidden";
-    return () => {
-      document.body.style.overflowY = "auto";
-    };
-  }, []);
-
-  useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
@@ -31,13 +24,22 @@ const RollingImage = () => {
       ref={scrollContainerRef}
       style={{
         width: "100vw",
-        height: "100vh",
+        height: "300px",
         overflowX: "scroll",
         overflowY: "hidden",
         whiteSpace: "nowrap",
         position: "relative",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
       }}
     >
+      <style>
+        {`
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+        `}
+      </style>
       <div style={{ width: "300vw", height: "100%" }}>
         <img
           src="/milo.png"
