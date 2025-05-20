@@ -1,0 +1,19 @@
+.typing-text {
+  font-family: monospace;
+  font-size: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.cursor {
+  animation: blink 0.7s infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
