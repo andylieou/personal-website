@@ -22,7 +22,15 @@ const Projects = () => {
                     body="body"
                 ></ProjectCard>
                 <ProjectCard
-                    title="SeedWise"
+                    title="VRBO Booking Request Migration"
+                    body="body"
+                ></ProjectCard>
+                <ProjectCard
+                    title="Logical Neural Network"
+                    body="body"
+                ></ProjectCard>
+                <ProjectCard
+                    title="AI Pacman Agent"
                     body="body"
                 ></ProjectCard>
                 <ProjectCard
@@ -34,10 +42,6 @@ const Projects = () => {
                     body="body"
                 ></ProjectCard>
                 <ProjectCard
-                    title="Logical Neural Network"
-                    body="body"
-                ></ProjectCard>
-                <ProjectCard
                     title="Convolutional Neural Network"
                     body="body"
                 ></ProjectCard>
@@ -46,11 +50,7 @@ const Projects = () => {
                     body="body"
                 ></ProjectCard>
                 <ProjectCard
-                    title="VRBO Booking Request Migration"
-                    body="body"
-                ></ProjectCard>
-                <ProjectCard
-                    title="AI Pacman Agent"
+                    title="SeedWise"
                     body="body"
                 ></ProjectCard>
                 <ProjectCard
