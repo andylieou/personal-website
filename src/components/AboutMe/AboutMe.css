@@ -1,0 +1,15 @@
+.about-me-body {
+    color: black;
+    text-align: left;
+    font-size: 16px;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+}
+
+.about-me-list {
+    color: black;
+    text-align: left;
+    font-size: 16px;
+    font-family: monospace;
+}
