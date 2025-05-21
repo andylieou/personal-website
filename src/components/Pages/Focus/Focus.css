@@ -1,0 +1,19 @@
+.focus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .focus-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+.focus-video {
+  border-radius: 24px;
+  overflow: hidden;
+  border: none;
+}
