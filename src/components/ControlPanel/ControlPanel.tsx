@@ -6,11 +6,11 @@ import {
     useLocation,
 } from "react-router-dom";
 import ControlPanelButton from "./ControlPanelButton";
-import HomePage from "../HomePage/HomePage";
-import RollingImage from "../Elements/RollingImage";
-import NotFoundPage from "../NotFoundPage/NotFoundPage";
-import AboutMe from "../AboutMe/AboutMe";
-import Projects from "../Projects/Projects";
+import { HomePage } from "../HomePage";
+import { RollingImage } from "../Elements";
+import { NotFoundPage } from "../NotFoundPage";
+import { AboutMe } from "../AboutMe";
+import { Projects } from "../Projects";
 
 const Buttons = () => {
     return (

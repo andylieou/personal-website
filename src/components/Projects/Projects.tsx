@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import Kernel from "./ProjectDescriptions/Kernel";
+import { Kernel, Emulator } from "./ProjectDescriptions";
 
 const Projects = () => {
     return (
@@ -16,11 +16,11 @@ const Projects = () => {
             >
                 <ProjectCard
                     title="x86-32 Kernel"
-                    body={<Kernel/>}
+                    body={<Kernel />}
                 ></ProjectCard>
                 <ProjectCard
                     title="System Emulator"
-                    body="body"
+                    body={<Emulator />}
                 ></ProjectCard>
                 <ProjectCard
                     title="VRBO Booking Request Migration"
@@ -38,10 +38,7 @@ const Projects = () => {
                     title="Personal Website"
                     body="body"
                 ></ProjectCard>
-                <ProjectCard
-                    title="Puppy Chat"
-                    body="body"
-                ></ProjectCard>
+                <ProjectCard title="Puppy Chat" body="body"></ProjectCard>
                 <ProjectCard
                     title="Convolutional Neural Network"
                     body="body"
@@ -50,10 +47,7 @@ const Projects = () => {
                     title="Recurrent Neural Network"
                     body="body"
                 ></ProjectCard>
-                <ProjectCard
-                    title="SeedWise"
-                    body="body"
-                ></ProjectCard>
+                <ProjectCard title="SeedWise" body="body"></ProjectCard>
                 <ProjectCard
                     title="Memory Manager"
                     body="body"
