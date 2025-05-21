@@ -4,7 +4,6 @@ import "./Projects.css";
 interface ProjectCardProps {
     title: string;
     body: ReactNode;
-    image?: ReactNode;
     repoLink?: string;
     exampleLink?: string;
 }
@@ -12,7 +11,6 @@ interface ProjectCardProps {
 const ProjectCard = ({
     title,
     body,
-    image,
     repoLink,
     exampleLink,
 }: ProjectCardProps) => {
@@ -53,7 +51,6 @@ const ProjectCard = ({
                 </div>
                 <div className="project-card-back">
                     <div className="project-card-body">{body}</div>
-                    <div>{image}</div>
                     <div className="project-card-button-row">
                         <button
                             className="project-card-button"
