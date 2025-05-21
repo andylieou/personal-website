@@ -12,7 +12,11 @@ const Emulator = () => {
             <div style={{ height: "20px" }} />
             <p className="project-body">C, AArch64 assembly</p>
             <div style={{ height: "20px" }} />
-            <img src="/emulator.png" style={{ width: "500px" }}></img>
+            <img
+                src="/emulator.png"
+                alt="architecture diagram"
+                style={{ width: "500px" }}
+            ></img>
         </>
     );
 };

@@ -13,7 +13,11 @@ const Pacman = () => {
             <div style={{ height: "20px" }} />
             <p className="project-body">Python</p>
             <div style={{ height: "20px" }} />
-            <img src="/pacman.png" style={{ width: "500px" }}></img>
+            <img
+                src="/pacman.png"
+                alt="pacman board"
+                style={{ width: "500px" }}
+            ></img>
         </>
     );
 };

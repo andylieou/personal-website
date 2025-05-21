@@ -12,10 +12,13 @@ const PuppyChat = () => {
                 AI integration.
             </p>
             <div style={{ height: "10px" }} />
-            <p className="project-body">React, TypeScript, PyTorch, Jupyter Notebook, HTML, CSS</p>
+            <p className="project-body">
+                React, TypeScript, PyTorch, Jupyter Notebook, HTML, CSS
+            </p>
             <div style={{ height: "10px" }} />
             <img
                 src="/milo-chat.png"
+                alt="example milo chat"
                 style={{ width: "500px" }}
             ></img>
         </>

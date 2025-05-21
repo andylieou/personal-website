@@ -12,7 +12,11 @@ const Kernel = () => {
             <div style={{ height: "20px" }} />
             <p className="project-body">C, C++, x86 assembly</p>
             <div style={{ height: "20px" }} />
-            <img src="/kernel.png" style={{ width: "500px" }}></img>
+            <img
+                src="/kernel.png"
+                alt="user and kernel mode diagram"
+                style={{ width: "500px" }}
+            ></img>
         </>
     );
 };

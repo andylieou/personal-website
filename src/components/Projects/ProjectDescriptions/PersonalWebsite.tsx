@@ -16,6 +16,7 @@ const PersonalWebsite = () => {
             <div style={{ height: "20px" }} />
             <img
                 src="/personal-website.png"
+                alt="website home page"
                 style={{ width: "500px", border: "1px black solid" }}
             ></img>
         </>

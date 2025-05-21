@@ -9,9 +9,15 @@ const BookingRequests = () => {
                 GraphQL, enhancing performance and user experience.
             </p>
             <div style={{ height: "20px" }} />
-            <p className="project-body">React, TypeScript, Java, GraphQL</p>
+            <p className="project-body">
+                React, TypeScript, Java, GraphQL
+            </p>
             <div style={{ height: "20px" }} />
-            <img src="/booking.png" style={{ width: "500px" }}></img>
+            <img
+                src="/booking.png"
+                alt="vrbo logo"
+                style={{ width: "500px" }}
+            ></img>
         </>
     );
 };

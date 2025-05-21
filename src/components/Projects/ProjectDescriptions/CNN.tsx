@@ -13,9 +13,7 @@ const CNN = () => {
                 model performance.
             </p>
             <div style={{ height: "20px" }} />
-            <p className="project-body">
-                PyTorch, Jupyter Notebook
-            </p>
+            <p className="project-body">PyTorch, Jupyter Notebook</p>
             <div style={{ height: "20px" }} />
             <img src="/cnn.png" alt="cnn" style={{ width: "500px" }}></img>
         </>
