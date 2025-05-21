@@ -13,6 +13,7 @@ import {
     AboutMe,
     Projects,
     Connect,
+    Focus,
 } from "../Pages";
 
 const Buttons = () => {
@@ -47,6 +48,7 @@ const Panel = () => {
                 <Route path="/" element={<HomePage />}></Route>
                 <Route path="/about-me" element={<AboutMe />}></Route>
                 <Route path="/projects" element={<Projects />}></Route>
+                <Route path="/focus" element={<Focus />}></Route>
                 <Route path="/connect" element={<Connect />}></Route>
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>

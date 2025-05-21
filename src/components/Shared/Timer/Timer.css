@@ -1,0 +1,54 @@
+.timer-container {
+    width: 40vh;
+    height: 20vh;
+    border: 1px solid black;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.timer-display-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-display {
+    color: black;
+    text-align: left;
+    font-size: 32px;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+    text-align: center;
+}
+
+.timer-button-container {
+    width: 100%;
+    height: 50px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.timer-button {
+    border: 1px solid black;
+    border-radius: 24px;
+    font-family: monospace;
+    width: 80px;
+    background-color: transparent;
+}
+
+.timer-button:hover {
+    border: 2px solid black;
+}
