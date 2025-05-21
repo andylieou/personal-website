@@ -77,7 +77,7 @@ const Timer = () => {
         // either: not done loading OR the user did not make a change
         if (!hasLoaded || !userUpdatedTime) return;
 
-        // the user made a change, so we need to update 
+        // the user made a change, so we need to update
         const [hourStr, minStr, secStr] = time.split(":");
         const hours = parseInt(hourStr, 10) || 0;
         const minutes = parseInt(minStr, 10) || 0;

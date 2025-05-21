@@ -19,6 +19,9 @@ const Focus = () => {
                     ></iframe>
                 </div>
             </div>
+            <div>
+                {/* create a todo list that can be saved to local storage here */}
+            </div>
         </>
     );
 };
