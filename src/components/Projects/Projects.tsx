@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { Kernel, Emulator, BookingRequests } from "./ProjectDescriptions";
+import { Kernel, Emulator, BookingRequests, LogicNet } from "./ProjectDescriptions";
 
 const Projects = () => {
     return (
@@ -31,7 +31,8 @@ const Projects = () => {
                 ></ProjectCard>
                 <ProjectCard
                     title="Logical Neural Network"
-                    body="coming soon"
+                    body={<LogicNet />}
+                    learnMoreLink="https://www.geeksforgeeks.org/introduction-convolution-neural-network/"
                 ></ProjectCard>
                 <ProjectCard
                     title="AI Pacman Agent"
