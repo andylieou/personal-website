@@ -7,6 +7,7 @@ import {
     LogicNet,
     Pacman,
     PersonalWebsite,
+    PuppyChat,
 } from "./ProjectDescriptions";
 
 const Projects = () => {
@@ -54,7 +55,9 @@ const Projects = () => {
                 ></ProjectCard>
                 <ProjectCard
                     title="Puppy Chat"
-                    body="coming soon"
+                    body={<PuppyChat />}
+                    learnMoreLink="https://milothedog.com/"
+                    repoLink="https://github.com/andylieou/website"
                 ></ProjectCard>
                 <ProjectCard
                     title="Convolutional Neural Network"

@@ -14,7 +14,10 @@ const PersonalWebsite = () => {
             <div style={{ height: "20px" }} />
             <p className="project-body">React, TypeScript, HTML, CSS</p>
             <div style={{ height: "20px" }} />
-            <img src="/personal-website.png" style={{ width: "500px", border: "1px black solid" }}></img>
+            <img
+                src="/personal-website.png"
+                style={{ width: "500px", border: "1px black solid" }}
+            ></img>
         </>
     );
 };
