@@ -83,6 +83,7 @@ const Skills = () => {
         "Data Analytics",
         "Algorithms",
         "Git",
+        "Jupyter Notebook",
     ];
     const courses: string[] = [
         "Data Structures",
