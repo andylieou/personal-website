@@ -5,14 +5,14 @@ interface ProjectCardProps {
     title: string;
     body: ReactNode;
     repoLink?: string;
-    exampleLink?: string;
+    learnMoreLink?: string;
 }
 
 const ProjectCard = ({
     title,
     body,
     repoLink,
-    exampleLink,
+    learnMoreLink,
 }: ProjectCardProps) => {
     const [flipped, setFlipped] = useState(false);
 
@@ -21,17 +21,17 @@ const ProjectCard = ({
             open(repoLink, "_blank");
         } else {
             alert(
-                `Unfortunately, the code for this project is not available. Please reach out to andylieou@gmail.com for more information.`
+                `Unfortunately, the code for this project is not available. Please contact andylieou@gmail.com for more information.`
             );
         }
     };
 
-    const onExampleClick = () => {
-        if (exampleLink) {
-            open(exampleLink, "_blank");
+    const onLearnMoreClick = () => {
+        if (learnMoreLink) {
+            open(learnMoreLink, "_blank");
         } else {
             alert(
-                `Unfortunately, no example of this project is available. Please reach out to andylieou@gmail.com for more information.`
+                `Unfortunately, no additional information about this project is available. Please contact andylieou@gmail.com with any questions.`
             );
         }
     };
@@ -65,10 +65,10 @@ const ProjectCard = ({
                             className="project-card-button"
                             onClick={(e) => {
                                 e.stopPropagation(); // prevent the card from flipping
-                                onExampleClick();
+                                onLearnMoreClick();
                             }}
                         >
-                            Example
+                            Learn More
                         </button>
                     </div>
                 </div>
