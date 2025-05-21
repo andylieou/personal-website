@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { Kernel, Emulator } from "./ProjectDescriptions";
+import { Kernel, Emulator, BookingRequests } from "./ProjectDescriptions";
 
 const Projects = () => {
     return (
@@ -26,7 +26,8 @@ const Projects = () => {
                 ></ProjectCard>
                 <ProjectCard
                     title="VRBO Booking Request Migration"
-                    body="coming soon"
+                    body={<BookingRequests />}
+                    learnMoreLink="https://www.vrbo.com/"
                 ></ProjectCard>
                 <ProjectCard
                     title="Logical Neural Network"
