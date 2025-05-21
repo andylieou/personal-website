@@ -6,12 +6,14 @@ import {
     useLocation,
 } from "react-router-dom";
 import ControlPanelButton from "./ControlPanelButton";
-import { HomePage } from "../HomePage";
 import { RollingImage } from "../Elements";
-import { NotFoundPage } from "../NotFoundPage";
-import { AboutMe } from "../AboutMe";
-import { Projects } from "../Projects";
-import { Connect } from "../Connect";
+import {
+    HomePage,
+    NotFoundPage,
+    AboutMe,
+    Projects,
+    Connect,
+} from "../Pages";
 
 const Buttons = () => {
     return (

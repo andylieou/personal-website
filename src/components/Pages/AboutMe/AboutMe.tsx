@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "../Elements";
+import { Text } from "../../Elements";
 import "./AboutMe.css";
 
 const Background = () => {
