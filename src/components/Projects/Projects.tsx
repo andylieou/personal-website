@@ -6,6 +6,7 @@ import {
     BookingRequests,
     LogicNet,
     Pacman,
+    PersonalWebsite,
 } from "./ProjectDescriptions";
 
 const Projects = () => {
@@ -47,7 +48,9 @@ const Projects = () => {
                 ></ProjectCard>
                 <ProjectCard
                     title="Personal Website"
-                    body="coming soon"
+                    body={<PersonalWebsite />}
+                    learnMoreLink="https://andylieou.com/"
+                    repoLink="https://github.com/andylieou/personal-website"
                 ></ProjectCard>
                 <ProjectCard
                     title="Puppy Chat"

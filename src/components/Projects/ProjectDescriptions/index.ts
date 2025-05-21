@@ -3,3 +3,4 @@ export { default as Emulator } from "./Emulator";
 export { default as BookingRequests } from "./BookingRequests";
 export { default as LogicNet } from "./LogicNet";
 export { default as Pacman } from "./Pacman";
+export { default as PersonalWebsite } from "./PersonalWebsite";
