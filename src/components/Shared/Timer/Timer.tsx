@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Timer = () => {
     const [timeLeft, setTimeLeft] = useState(0);
+    const [timerOn, setTimerOn] = useState(false);
 
     useEffect(() => {
         if (Notification.permission !== "granted") {
@@ -10,12 +11,16 @@ const Timer = () => {
     }, []); // run once when this component mounts and never again
 
     useEffect(() => {
+        if (!timerOn) {
+            return;
+        }
         if (timeLeft == 0) {
             if (Notification.permission === "granted") {
                 new Notification("Time's up!");
             } else {
                 alert("Time's up!");
             }
+            setTimerOn(false);
             return;
         }
 
@@ -33,7 +38,6 @@ const Timer = () => {
             </div>
         </>
     );
-
 };
 
 export default Timer;
