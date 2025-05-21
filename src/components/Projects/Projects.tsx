@@ -17,40 +17,48 @@ const Projects = () => {
                 <ProjectCard
                     title="x86-32 Kernel"
                     body={<Kernel />}
+                    learnMoreLink="https://wiki.osdev.org/Expanded_Main_Page"
                 ></ProjectCard>
                 <ProjectCard
                     title="System Emulator"
                     body={<Emulator />}
+                    learnMoreLink="https://www.geeksforgeeks.org/pipelining-in-arm/"
                 ></ProjectCard>
                 <ProjectCard
                     title="VRBO Booking Request Migration"
-                    body="body"
+                    body="coming soon"
                 ></ProjectCard>
                 <ProjectCard
                     title="Logical Neural Network"
-                    body="body"
+                    body="coming soon"
                 ></ProjectCard>
                 <ProjectCard
                     title="AI Pacman Agent"
-                    body="body"
+                    body="coming soon"
                 ></ProjectCard>
                 <ProjectCard
                     title="Personal Website"
-                    body="body"
+                    body="coming soon"
                 ></ProjectCard>
-                <ProjectCard title="Puppy Chat" body="body"></ProjectCard>
+                <ProjectCard
+                    title="Puppy Chat"
+                    body="coming soon"
+                ></ProjectCard>
                 <ProjectCard
                     title="Convolutional Neural Network"
-                    body="body"
+                    body="coming soon"
                 ></ProjectCard>
                 <ProjectCard
                     title="Recurrent Neural Network"
-                    body="body"
+                    body="coming soon"
                 ></ProjectCard>
-                <ProjectCard title="SeedWise" body="body"></ProjectCard>
+                <ProjectCard
+                    title="SeedWise"
+                    body="coming soon"
+                ></ProjectCard>
                 <ProjectCard
                     title="Memory Manager"
-                    body="body"
+                    body="coming soon"
                 ></ProjectCard>
             </div>
         </>

@@ -4,15 +4,15 @@ const Emulator = () => {
     return (
         <>
             <p className="project-body">
-                Built an x86-32 OS Emulator with preemptive multithreading,
-                context switching, garbage collection, an EXT2 file system,
-                virtual memory, ELF executable loading, process scheduling,
-                and system calls.
+                Developed a CPU emulator for AArch64 assembly with support
+                for ELF executables, featuring a five-stage pipeline,
+                caching, and branch prediction. Handled pipeline hazards
+                and maintained execution correctness.
             </p>
             <div style={{ height: "20px" }} />
-            <p className="project-body">C, C++, x86 assembly</p>
+            <p className="project-body">C, AArch64 assembly</p>
             <div style={{ height: "20px" }} />
-            <img src="" style={{ width: "500px" }}></img>
+            <img src="/emulator.png" style={{ width: "500px" }}></img>
         </>
     );
 };
