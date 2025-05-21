@@ -6,7 +6,7 @@ import {
     useLocation,
 } from "react-router-dom";
 import ControlPanelButton from "./ControlPanelButton";
-import { RollingImage } from "../Elements";
+import { RollingImage } from "../Shared";
 import {
     HomePage,
     NotFoundPage,

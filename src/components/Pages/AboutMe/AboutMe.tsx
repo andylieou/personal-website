@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "../../Elements";
+import { Text } from "../../Shared";
 import "./AboutMe.css";
 
 const Background = () => {
