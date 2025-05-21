@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Timer.css";
 import TimeDisplay from "./TimeDisplay";
 
@@ -15,6 +15,7 @@ const formatTime = (totalSeconds: number): string => {
 };
 
 const Timer = () => {
+    const alarm = useRef(new Audio("/alert.wav"));
     const [timeLeft, setTimeLeft] = useState(0);
     const [timerOn, setTimerOn] = useState(false);
     const [time, setTime] = useState(formatTime(timeLeft));
@@ -53,6 +54,8 @@ const Timer = () => {
             return;
         }
         if (timeLeft == 0) {
+            alarm.current.play();
+
             if (Notification.permission === "granted") {
                 new Notification("Time's up!");
             } else {
