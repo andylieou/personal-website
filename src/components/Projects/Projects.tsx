@@ -10,6 +10,7 @@ import {
     PuppyChat,
     CNN,
     RNN,
+    SeedWise,
 } from "./ProjectDescriptions";
 
 const Projects = () => {
@@ -73,7 +74,8 @@ const Projects = () => {
                 ></ProjectCard>
                 <ProjectCard
                     title="SeedWise"
-                    body="coming soon"
+                    body={<SeedWise />}
+                    learnMoreLink="https://www.behance.net/gallery/166194241/SeedWise"
                 ></ProjectCard>
                 <ProjectCard
                     title="Memory Manager"
