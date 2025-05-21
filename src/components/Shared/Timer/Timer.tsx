@@ -31,6 +31,9 @@ const Timer = () => {
         const storedEndTime = localStorage.getItem("timerEndTime");
         if (storedEndTime) {
             const endTime = parseInt(storedEndTime, 10);
+
+            // the difference between the saved endTime and the current time
+            // if negative, the timer is done
             const newTimeLeft = Math.max(
                 0,
                 Math.floor((endTime - Date.now()) / 1000)
@@ -93,6 +96,7 @@ const Timer = () => {
     // create a local storage item to save the end time
     useEffect(() => {
         if (timerOn) {
+            // save the end time relative to the current time
             const endTime = Date.now() + timeLeft * 1000;
             localStorage.setItem("timerEndTime", endTime.toString());
         } else {
