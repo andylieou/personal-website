@@ -30,7 +30,7 @@ const Buttons = () => {
             <ControlPanelButton title="Home" page="/" />
             <ControlPanelButton title="About Me" page="/about-me" />
             <ControlPanelButton title="Projects" page="/projects" />
-            <ControlPanelButton title="Interests" page="/interests" />
+            <ControlPanelButton title="Focus" page="/focus" />
             <ControlPanelButton title="Connect" page="/connect" />
         </div>
     );
