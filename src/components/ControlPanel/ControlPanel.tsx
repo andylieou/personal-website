@@ -11,6 +11,7 @@ import { RollingImage } from "../Elements";
 import { NotFoundPage } from "../NotFoundPage";
 import { AboutMe } from "../AboutMe";
 import { Projects } from "../Projects";
+import { Connect } from "../Connect";
 
 const Buttons = () => {
     return (
@@ -44,6 +45,7 @@ const Panel = () => {
                 <Route path="/" element={<HomePage />}></Route>
                 <Route path="/about-me" element={<AboutMe />}></Route>
                 <Route path="/projects" element={<Projects />}></Route>
+                <Route path="/connect" element={<Connect />}></Route>
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
             {onHomePage && <Buttons />}
