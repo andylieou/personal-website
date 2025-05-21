@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import Kernel from "./ProjectDescriptions/Kernel";
 
 const Projects = () => {
     return (
@@ -15,7 +16,7 @@ const Projects = () => {
             >
                 <ProjectCard
                     title="x86-32 Kernel"
-                    body="body"
+                    body={<Kernel/>}
                 ></ProjectCard>
                 <ProjectCard
                     title="System Emulator"

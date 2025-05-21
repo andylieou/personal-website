@@ -59,6 +59,7 @@
 .project-card-body {
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 16px;
@@ -82,4 +83,13 @@
 
 .project-card-button:hover {
     border: 2px solid black;
+}
+
+.project-body {
+    color: black;
+    text-align: left;
+    font-size: 16px;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
 }
