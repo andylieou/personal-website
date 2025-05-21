@@ -6,3 +6,4 @@ export { default as Pacman } from "./Pacman";
 export { default as PersonalWebsite } from "./PersonalWebsite";
 export { default as PuppyChat } from "./PuppyChat";
 export { default as CNN } from "./CNN";
+export { default as RNN } from "./RNN";

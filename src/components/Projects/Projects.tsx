@@ -9,6 +9,7 @@ import {
     PersonalWebsite,
     PuppyChat,
     CNN,
+    RNN,
 } from "./ProjectDescriptions";
 
 const Projects = () => {
@@ -67,7 +68,8 @@ const Projects = () => {
                 ></ProjectCard>
                 <ProjectCard
                     title="Recurrent Neural Network"
-                    body="coming soon"
+                    body={<RNN />}
+                    learnMoreLink="https://www.geeksforgeeks.org/introduction-to-recurrent-neural-network/"
                 ></ProjectCard>
                 <ProjectCard
                     title="SeedWise"
