@@ -15,7 +15,7 @@ const LogicNet = () => {
             <img
                 src="/logic-net.png"
                 alt="logic net architecture"
-                style={{ width: "500px" }}
+                style={{ width: "400px" }}
             ></img>
         </>
     );

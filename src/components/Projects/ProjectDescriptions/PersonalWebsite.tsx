@@ -17,7 +17,7 @@ const PersonalWebsite = () => {
             <img
                 src="/personal-website.png"
                 alt="website home page"
-                style={{ width: "500px", border: "1px black solid" }}
+                style={{ width: "400px", border: "1px black solid" }}
             ></img>
         </>
     );

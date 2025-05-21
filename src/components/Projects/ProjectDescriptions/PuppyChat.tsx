@@ -19,7 +19,7 @@ const PuppyChat = () => {
             <img
                 src="/milo-chat.png"
                 alt="example milo chat"
-                style={{ width: "500px" }}
+                style={{ width: "400px" }}
             ></img>
         </>
     );
