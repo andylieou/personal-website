@@ -8,3 +8,4 @@ export { default as PuppyChat } from "./PuppyChat";
 export { default as CNN } from "./CNN";
 export { default as RNN } from "./RNN";
 export { default as SeedWise } from "./SeedWise";
+export { default as Memory } from "./Memory";

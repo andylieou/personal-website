@@ -11,6 +11,7 @@ import {
     CNN,
     RNN,
     SeedWise,
+    Memory,
 } from "./ProjectDescriptions";
 
 const Projects = () => {
@@ -79,7 +80,8 @@ const Projects = () => {
                 ></ProjectCard>
                 <ProjectCard
                     title="Memory Manager"
-                    body="coming soon"
+                    body={<Memory />}
+                    learnMoreLink="https://sourceware.org/glibc/wiki/MallocInternals"
                 ></ProjectCard>
             </div>
         </>
