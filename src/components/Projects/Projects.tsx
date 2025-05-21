@@ -1,6 +1,12 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { Kernel, Emulator, BookingRequests, LogicNet } from "./ProjectDescriptions";
+import {
+    Kernel,
+    Emulator,
+    BookingRequests,
+    LogicNet,
+    Pacman,
+} from "./ProjectDescriptions";
 
 const Projects = () => {
     return (
@@ -36,7 +42,8 @@ const Projects = () => {
                 ></ProjectCard>
                 <ProjectCard
                     title="AI Pacman Agent"
-                    body="coming soon"
+                    body={<Pacman />}
+                    learnMoreLink="https://ai.berkeley.edu/home.html"
                 ></ProjectCard>
                 <ProjectCard
                     title="Personal Website"
