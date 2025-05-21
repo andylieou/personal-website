@@ -9,7 +9,7 @@ const Background = () => {
                 I'm a recent graduate from the University of Texas at
                 Austin, where I earned my Bachelor's in Computer Science
                 with a certicate in Applied Statistical Modeling,
-                graduating with a High Honors (GPA: 3.97). I’ve always been
+                graduating with High Honors (GPA: 3.97). I’ve always been
                 drawn to the intersection of systems, machine learning, and
                 full stack development — whether it's building low-level
                 kernels, experimenting with neural networks, or crafting
@@ -43,7 +43,7 @@ const Experiences = () => {
             <p className="about-me-body">
                 During my time at UT Austin, I served as a Course Assistant
                 for Computer Architecture, where I supported students
-                through lectures, office hours, and assignment feedback,
+                through discussions, office hours, and assignment feedback,
                 deepening both my technical understanding and communication
                 skills.
             </p>
