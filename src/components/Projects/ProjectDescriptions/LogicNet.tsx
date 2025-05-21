@@ -11,7 +11,7 @@ const LogicNet = () => {
             </p>
             <div style={{ height: "20px" }} />
             <p className="project-body">
-                PyTorch
+                PyTorch, Jupyter Notebook
             </p>
             <div style={{ height: "20px" }} />
             <img src="/logic-net.png" style={{ width: "500px" }}></img>

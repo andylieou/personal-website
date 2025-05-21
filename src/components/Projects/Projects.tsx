@@ -8,6 +8,7 @@ import {
     Pacman,
     PersonalWebsite,
     PuppyChat,
+    CNN,
 } from "./ProjectDescriptions";
 
 const Projects = () => {
@@ -61,7 +62,8 @@ const Projects = () => {
                 ></ProjectCard>
                 <ProjectCard
                     title="Convolutional Neural Network"
-                    body="coming soon"
+                    body={<CNN />}
+                    learnMoreLink="https://www.datacamp.com/tutorial/introduction-to-convolutional-neural-networks-cnns"
                 ></ProjectCard>
                 <ProjectCard
                     title="Recurrent Neural Network"
