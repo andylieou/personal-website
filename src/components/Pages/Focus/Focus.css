@@ -17,3 +17,65 @@
     overflow: hidden;
     border: none;
 }
+
+.focus-scrolling-image {
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+    animation: moveRight 10s linear infinite;
+}
+
+@keyframes moveRight {
+    0% {
+        left: -200px;
+        bottom: 40px;
+    }
+
+    10% {
+        bottom: 80px;
+    }
+
+    20% {
+        bottom: 40px;
+    }
+
+    30% {
+        bottom: 80px;
+    }
+
+    40% {
+        bottom: 40px;
+    }
+
+    50% {
+        bottom: 80px;
+    }
+
+    60% {
+        bottom: 40px;
+    }
+
+    70% {
+        bottom: 80px;
+    }
+
+    80% {
+        bottom: 40px;
+    }
+
+    90% {
+        bottom: 80px;
+    }
+
+    100% {
+        left: calc(100vw - 200px);
+        bottom: 40px;
+    }
+}
+
+.focus-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
