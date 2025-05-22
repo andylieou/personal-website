@@ -57,7 +57,12 @@ export const CreateToDoListItem = ({
         setText("Create a new task...");
     };
 
-    const handleBlur = () => setIsEditing(false);
+    const reset = () => {
+        setIsEditing(false);
+        setText("Create a new task...");
+    };
+
+    const handleBlur = () => reset();
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === "Enter") {
@@ -82,6 +87,7 @@ export const CreateToDoListItem = ({
                         onChange={handleChange}
                         onBlur={handleBlur}
                         onKeyDown={handleKeyDown}
+                        onFocus={() => setText("")}
                     />
                 ) : (
                     <div
