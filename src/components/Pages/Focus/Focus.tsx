@@ -1,6 +1,7 @@
 import React from "react";
 import "./Focus.css";
 import { Timer } from "../../Shared";
+import { ToDoList } from "./ToDoList";
 
 const Focus = () => {
     return (
@@ -19,8 +20,8 @@ const Focus = () => {
                     ></iframe>
                 </div>
             </div>
-            <div>
-                {/* create a todo list that can be saved to local storage here */}
+            <div className="focus-container">
+                <ToDoList />
             </div>
         </>
     );
