@@ -27,7 +27,7 @@
 
 @keyframes moveRight {
     0% {
-        left: -200px;
+        left: calc(100vw - 200px);
         bottom: 40px;
     }
 
@@ -68,7 +68,7 @@
     }
 
     100% {
-        left: calc(100vw - 200px);
+        left: -200px;
         bottom: 40px;
     }
 }

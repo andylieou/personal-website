@@ -25,7 +25,7 @@ const Focus = () => {
                     <ToDoList />
                 </div>
                 <img
-                    src="/milo.png"
+                    src="/milo-plane.png"
                     alt="moving dog"
                     className="focus-scrolling-image"
                 />
