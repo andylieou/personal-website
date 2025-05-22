@@ -47,7 +47,10 @@ const Timer = () => {
     }, []);
 
     useEffect(() => {
-        if ("Notification" in window && Notification.permission !== "granted") {
+        if (
+            "Notification" in window &&
+            Notification.permission !== "granted"
+        ) {
             Notification.requestPermission();
         }
     }, []); // run once when this component mounts and never again
@@ -59,7 +62,10 @@ const Timer = () => {
         if (timeLeft == 0) {
             alarm.current.play();
 
-            if ("Notification" in window && Notification.permission === "granted") {
+            if (
+                "Notification" in window &&
+                Notification.permission === "granted"
+            ) {
                 new Notification("Time's up!");
             } else {
                 alert("Time's up!");

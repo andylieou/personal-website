@@ -6,7 +6,10 @@ const HomePage = () => {
     return (
         <>
             <div className="container">
-                <TypingAnimation write="Hi! I'm Andy Lieou" fontSize={50} />
+                <TypingAnimation
+                    write="Hi! I'm Andy Lieou"
+                    fontSize={50}
+                />
             </div>
         </>
     );

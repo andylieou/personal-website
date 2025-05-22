@@ -24,7 +24,7 @@
     text-align: center;
     margin: 0px;
     padding: 8px;
-    font-family: monospace;    
+    font-family: monospace;
 }
 
 .todo-title {
@@ -75,4 +75,3 @@
     padding: 8px;
     cursor: pointer;
 }
-
