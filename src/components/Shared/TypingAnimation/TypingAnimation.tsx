@@ -3,9 +3,10 @@ import "./TypingAnimation.css";
 
 interface TypingAnimationProps {
     write: string;
+    fontSize: number;
 }
 
-const TypingAnimation: React.FC<TypingAnimationProps> = ({ write }) => {
+const TypingAnimation: React.FC<TypingAnimationProps> = ({ write, fontSize }) => {
     const [text, setText] = useState("");
     const typingText = write;
 
@@ -25,7 +26,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({ write }) => {
     }, [typingText]);
 
     return (
-        <div className="typing-text">
+        <div className="typing-text" style={{fontSize: `${fontSize}px`}}>
             {text}
             <span className="cursor">|</span>
         </div>

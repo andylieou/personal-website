@@ -6,7 +6,7 @@ const HomePage = () => {
     return (
         <>
             <div className="container">
-                <TypingAnimation write="Hi! I'm Andy Lieou" />
+                <TypingAnimation write="Hi! I'm Andy Lieou" fontSize={50} />
             </div>
         </>
     );
