@@ -21,6 +21,7 @@ export const ToDoListItem = ({
                     <img
                         src="/done.png"
                         className="todo-item-button"
+                        alt="done"
                         onClick={() => {
                             onToggleDone(task.id);
                         }}
@@ -28,6 +29,7 @@ export const ToDoListItem = ({
                     <img
                         src="/delete.png"
                         className="todo-item-button"
+                        alt="delete"
                         onClick={() => {
                             onDelete(task.id);
                         }}
