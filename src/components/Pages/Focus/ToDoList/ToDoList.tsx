@@ -90,6 +90,7 @@ const ToDoList = () => {
         signOut(auth).catch((error) => {
             console.error("❌ Logout error:", error);
         });
+        window.location.reload();
     };
 
     return (

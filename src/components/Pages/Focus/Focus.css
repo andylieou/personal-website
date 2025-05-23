@@ -79,3 +79,24 @@
     justify-content: space-between;
     flex-direction: column;
 }
+
+.focus-login-button {
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    font-family: monospace;
+    border-radius: 24px;
+    padding: 8px;
+}
+
+.focus-login-button:hover {
+    border: 2px solid black;
+}
+
+.focus-button-container {
+    display: flex;
+    margin: 32px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

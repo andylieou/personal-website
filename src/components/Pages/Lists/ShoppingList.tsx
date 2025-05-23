@@ -98,7 +98,7 @@ const ShoppingList = ({ list, title }: ShoppingListProps) => {
                 <h3 className="shopping-list-text">{title}</h3>
                 <div className="shopping-list-item-container">
                     {items.map((item) => (
-                        <ListItem item={item} list={list} />
+                        <ListItem key={item.id} item={item} list={list} />
                     ))}
                 </div>
                 <div className="shopping-list-input-container">

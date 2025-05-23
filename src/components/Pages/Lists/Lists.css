@@ -100,3 +100,22 @@
 .list-item-button:hover {
     opacity: 1;
 }
+
+.list-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-log-button {
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    font-family: monospace;
+    border-radius: 24px;
+    padding: 8px;
+}
+
+.list-log-button:hover {
+    border: 2px solid black;
+}

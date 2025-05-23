@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 import "./Lists.css";
 import ShoppingList from "./ShoppingList";
+import { signOut } from "firebase/auth";
 
 const Lists = () => {
     const [user, setUser] = useState<User | any>(null);
@@ -19,14 +20,21 @@ const Lists = () => {
         return () => unsubscribe();
     }, []);
 
+    const handleLogout = () => {
+        signOut(auth).catch((error) => {
+            console.error("❌ Logout error:", error);
+        });
+        window.location.reload();
+    };
+
     const handleLogin = async () => {
         const provider = new GoogleAuthProvider();
 
         try {
-            // Try popup first
+            // try popup first
             await signInWithPopup(auth, provider);
         } catch (err: any) {
-            // If popup fails (like in restricted mobile browsers), fall back to redirect
+            // if popup fails (like in restricted mobile browsers), fall back to redirect
             console.warn(
                 "Popup failed, falling back to redirect:",
                 err.message
@@ -42,26 +50,32 @@ const Lists = () => {
         }
     };
 
-    if (!user) {
-        return (
-            <div className="focus-page">
-                <button
-                    onClick={handleLogin}
-                    className="todo-logout-button"
-                >
-                    Sign in with Google
-                </button>
-            </div>
-        );
-    }
-
     return (
-        <div className="list-container">
-            <ShoppingList list="clothes" title="Clothes" />
-            <ShoppingList list="electronics" title="Electronics" />
-            <ShoppingList list="kitchen" title="Kitchen" />
-            <ShoppingList list="miscellaneous" title="Miscellaneous" />
-        </div>
+        <>
+            <div className="list-container">
+                <ShoppingList list="clothes" title="Clothes" />
+                <ShoppingList list="electronics" title="Electronics" />
+                <ShoppingList list="kitchen" title="Kitchen" />
+                <ShoppingList list="miscellaneous" title="Miscellaneous" />
+            </div>
+            <div className="list-button-container">
+                {user ? (
+                    <button
+                        onClick={handleLogout}
+                        className="list-log-button"
+                    >
+                        Logout
+                    </button>
+                ) : (
+                    <button
+                        onClick={handleLogin}
+                        className="list-log-button"
+                    >
+                        Sign in with Google
+                    </button>
+                )}
+            </div>
+        </>
     );
 };
 

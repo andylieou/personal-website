@@ -44,19 +44,6 @@ const Focus = () => {
         }
     };
 
-    if (!user) {
-        return (
-            <div className="focus-page">
-                <button
-                    onClick={handleLogin}
-                    className="todo-logout-button"
-                >
-                    Sign in with Google
-                </button>
-            </div>
-        );
-    }
-
     return (
         <>
             <div className="focus-page">
@@ -74,9 +61,20 @@ const Focus = () => {
                         ></iframe>
                     </div>
                 </div>
-                <div className="focus-container">
-                    <ToDoList />
-                </div>
+                {user ? (
+                    <div className="focus-container">
+                        <ToDoList />
+                    </div>
+                ) : (
+                    <div className="focus-button-container">
+                        <button
+                            onClick={handleLogin}
+                            className="focus-login-button"
+                        >
+                            Sign in with Google to create To-Do List
+                        </button>
+                    </div>
+                )}
                 <img
                     src="/milo-plane.png"
                     alt="moving dog"
