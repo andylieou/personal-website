@@ -22,11 +22,13 @@ const Buttons = () => {
         <div
             className="panel"
             style={{
-                display: "grid",
-                gridTemplateColumns:
-                    "repeat(auto-fit, minmax(200px, 1fr))",
+                display: "flex",
+                flexWrap: "wrap",
+                // gridTemplateColumns:
+                //     "repeat(auto-fit, minmax(200px, 1fr))",
                 gap: "16px",
                 padding: "16px",
+                justifyContent: "center",
             }}
         >
             <ControlPanelButton title="Home" page="/" />

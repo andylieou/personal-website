@@ -6,6 +6,9 @@
     font-family: monospace;
     background-color: transparent;
     color: black;
+    min-width: 200px;
+    width: 15vw;
+    max-width: 300px;
 }
 
 .control-button:hover {
