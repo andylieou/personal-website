@@ -22,7 +22,7 @@ const ListItem = ({ item, list }: ListItemProps) => {
 
     return (
         <div className="list-item">
-            <p className="shopping-list-item-text">{`${item.name} $${item.price}`}</p>
+            <p className="shopping-list-item-text" onClick={onClick}>{`${item.name} $${item.price}`}</p>
             <button
                 className="list-item-button"
                 onClick={(e) => {
