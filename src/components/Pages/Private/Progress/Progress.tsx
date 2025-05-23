@@ -41,6 +41,7 @@ const getTop = (sortBy: string, entry: Entry): number => {
 const Progress = () => {
     const [sortBy, setSortBy] = useState<string>("steps");
     const [entries, setEntries] = useState<Entry[]>([]);
+    const [number, setNumber] = useState<number>(30);
 
     useEffect(() => {
         const thingsRef = ref(db, "private");
@@ -68,10 +69,14 @@ const Progress = () => {
         return () => unsubscribe();
     }, []);
 
-    const earliestDate = Math.min(...entries.map((e) => e.date));
+    const desiredEntries = [...entries]
+        .sort((a, b) => a.date - b.date)
+        .slice(-number);
+
+    const earliestDate = Math.min(...desiredEntries.map((e) => e.date));
     const pixelsPerDay = 30;
     const scaleFactor = getScaleFactor(sortBy);
-    const values = entries.map((entry) => getTop(sortBy, entry));
+    const values = desiredEntries.map((entry) => getTop(sortBy, entry));
     const maxValue = Math.max(...values);
 
     const onSortClick = (by: string) => {
@@ -82,7 +87,7 @@ const Progress = () => {
         <>
             <h2 className="progress-text">Health Tracker</h2>
             <div className="progress-container">
-                {entries.map((entry) => {
+                {desiredEntries.map((entry) => {
                     const daysSinceStart = Math.floor(
                         (entry.date - earliestDate) / (1000 * 60 * 60 * 24)
                     );
@@ -121,6 +126,16 @@ const Progress = () => {
                 >
                     Steps
                 </button>
+                <input
+                    className="progress-input"
+                    type="text"
+                    placeholder="Entries to Display"
+                    value={number}
+                    onChange={(e) => {
+                        const val = parseInt(e.target.value);
+                        if (!isNaN(val) && val > 0) setNumber(val);
+                    }}
+                />
             </div>
             <CreateEntry />
         </>
