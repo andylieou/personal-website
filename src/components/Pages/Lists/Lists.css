@@ -1,6 +1,7 @@
 .list-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
     padding: 16px;
     margin: 16px;
@@ -10,6 +11,8 @@
     border: 1px solid black;
     border-radius: 16px;
     padding: 16px;
+    min-width: 400px;
+    max-width: 600px;
 }
 
 .shopping-list-item-container {
