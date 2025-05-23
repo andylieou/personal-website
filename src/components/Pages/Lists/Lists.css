@@ -1,0 +1,102 @@
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    margin: 16px;
+}
+
+.shopping-list-container {
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.shopping-list-item-container {
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 8px;
+    min-height: 32px;
+}
+
+.shopping-list-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.shopping-list-input {
+    color: black;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+.shopping-list-text {
+    color: black;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+}
+
+.shopping-list-button {
+    color: black;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+.shopping-list-button:disabled {
+    cursor: not-allowed;
+}
+
+.shopping-list-button:hover {
+    border: 2px solid black;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-item-content {
+    display: flex;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.shopping-list-item-text {
+    color: black;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+}
+
+.shopping-list-item-text:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.list-item-button {
+    background-color: transparent;
+    opacity: 0;
+    border: transparent;
+    transition: opacity 0.2 ease;
+}
+
+.list-item-button:hover {
+    opacity: 1;
+}

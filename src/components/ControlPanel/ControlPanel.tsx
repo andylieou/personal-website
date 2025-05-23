@@ -14,6 +14,7 @@ import {
     Projects,
     Connect,
     Focus,
+    Lists,
 } from "../Pages";
 
 const Buttons = () => {
@@ -32,6 +33,7 @@ const Buttons = () => {
             <ControlPanelButton title="About Me" page="/about-me" />
             <ControlPanelButton title="Projects" page="/projects" />
             <ControlPanelButton title="Focus" page="/focus" />
+            <ControlPanelButton title="Lists" page="/lists" />
             <ControlPanelButton title="Connect" page="/connect" />
         </div>
     );
@@ -49,6 +51,7 @@ const Panel = () => {
                 <Route path="/about-me" element={<AboutMe />}></Route>
                 <Route path="/projects" element={<Projects />}></Route>
                 <Route path="/focus" element={<Focus />}></Route>
+                <Route path="/lists" element={<Lists />}></Route>
                 <Route path="/connect" element={<Connect />}></Route>
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
