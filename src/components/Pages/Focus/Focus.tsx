@@ -25,10 +25,11 @@ const Focus = () => {
         const provider = new GoogleAuthProvider();
 
         try {
-            // Try popup first
+            // try popup first
             await signInWithPopup(auth, provider);
         } catch (err: any) {
-            // If popup fails (like in restricted mobile browsers), fall back to redirect
+            // if popup fails (like in restricted mobile browsers), fall back to redirect
+            // this probably won't work cause redirect took years off my life
             console.warn(
                 "Popup failed, falling back to redirect:",
                 err.message

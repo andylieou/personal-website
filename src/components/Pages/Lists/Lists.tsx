@@ -35,6 +35,7 @@ const Lists = () => {
             await signInWithPopup(auth, provider);
         } catch (err: any) {
             // if popup fails (like in restricted mobile browsers), fall back to redirect
+            // this probably won't work cause redirect took years off my life
             console.warn(
                 "Popup failed, falling back to redirect:",
                 err.message
