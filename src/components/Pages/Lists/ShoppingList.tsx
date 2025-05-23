@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../../firebase";
-import {
-    ref,
-    push,
-    set,
-    onValue,
-    DataSnapshot,
-} from "firebase/database";
+import { ref, push, set, onValue, DataSnapshot } from "firebase/database";
 import "./Lists.css";
 import ListItem from "./ListItem";
 
@@ -15,18 +9,18 @@ export interface Item {
     name: string;
     link: string;
     price: string;
-};
+}
 
 interface ShoppingListProps {
     list: string;
     title: string;
-};
+}
 
 const ensureHTTPs = (url: string): string => {
-  if (!/^https?:\/\//i.test(url)) {
-    return `https://${url}`;
-  }
-  return url;
+    if (!/^https?:\/\//i.test(url)) {
+        return `https://${url}`;
+    }
+    return url;
 };
 
 const ShoppingList = ({ list, title }: ShoppingListProps) => {
@@ -40,11 +34,17 @@ const ShoppingList = ({ list, title }: ShoppingListProps) => {
         const trimmedLink = link.trim();
         const trimmedPrice = price.trim();
 
-        const cleanPrice = trimmedPrice.startsWith("$") ? trimmedPrice.slice(1) : trimmedPrice;
+        const cleanPrice = trimmedPrice.startsWith("$")
+            ? trimmedPrice.slice(1)
+            : trimmedPrice;
         const cleanLink = ensureHTTPs(trimmedLink);
 
         const newRef = push(ref(db, list));
-        const newItem = { name: trimmedName, link: cleanLink, price: cleanPrice };
+        const newItem = {
+            name: trimmedName,
+            link: cleanLink,
+            price: cleanPrice,
+        };
         set(newRef, newItem).catch((err) => {
             alert("You are not authorized to add items.");
             console.error(err);
@@ -98,7 +98,7 @@ const ShoppingList = ({ list, title }: ShoppingListProps) => {
                 <h3 className="shopping-list-text">{title}</h3>
                 <div className="shopping-list-item-container">
                     {items.map((item) => (
-                        <ListItem item={item} list={list}/>
+                        <ListItem item={item} list={list} />
                     ))}
                 </div>
                 <div className="shopping-list-input-container">

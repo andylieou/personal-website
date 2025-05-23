@@ -44,10 +44,10 @@ const Lists = () => {
 
     return (
         <div className="list-container">
-            <ShoppingList list="clothes" title="Clothes"/>
-            <ShoppingList list="electronics" title="Electronics"/>
-            <ShoppingList list="kitchen" title="Kitchen"/>
-            <ShoppingList list="miscellaneous" title="Miscellaneous"/>
+            <ShoppingList list="clothes" title="Clothes" />
+            <ShoppingList list="electronics" title="Electronics" />
+            <ShoppingList list="kitchen" title="Kitchen" />
+            <ShoppingList list="miscellaneous" title="Miscellaneous" />
         </div>
     );
 };
