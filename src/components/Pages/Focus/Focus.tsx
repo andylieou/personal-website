@@ -24,16 +24,23 @@ const Focus = () => {
     const handleLogin = async () => {
         const provider = new GoogleAuthProvider();
 
-        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
         try {
-            if (isMobile) {
+            // Try popup first
+            await signInWithPopup(auth, provider);
+        } catch (err: any) {
+            // If popup fails (like in restricted mobile browsers), fall back to redirect
+            console.warn(
+                "Popup failed, falling back to redirect:",
+                err.message
+            );
+            try {
                 await signInWithRedirect(auth, provider);
-            } else {
-                await signInWithPopup(auth, provider);
+            } catch (redirectErr: any) {
+                console.error(
+                    "Redirect also failed:",
+                    redirectErr.message
+                );
             }
-        } catch (error: any) {
-            console.error("❌ Login failed:", error.message);
         }
     };
 
