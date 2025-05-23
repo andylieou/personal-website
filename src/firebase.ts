@@ -11,7 +11,7 @@ import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: "AIzaSyDZj22MS75uPTLJx91HVPEd563gUvp-D1s",
   authDomain: "shoppinglist-18f87.firebaseapp.com",
-  databaseURL: "https://shoppinglist-18f87-default-rtdb.firebaseio.com/",
+  databaseURL: "https://shoppinglist-18f87-default-rtdb.firebaseio.com",
   projectId: "shoppinglist-18f87",
   storageBucket: "shoppinglist-18f87.firebasestorage.app",
   messagingSenderId: "1017532984839",

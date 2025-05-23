@@ -5,51 +5,49 @@ import {
     signInWithRedirect,
     onAuthStateChanged,
     getRedirectResult,
+    signInWithPopup,
+    User,
 } from "firebase/auth";
 import "./Lists.css";
 import ShoppingList from "./ShoppingList";
 
 const Lists = () => {
-    const [checkingAuth, setCheckingAuth] = useState(true);
-
-    // get the user to sign in!
+    const [user, setUser] = useState<User | any>(null);
     useEffect(() => {
-        // onAuthStateChanged waits for Firebase to confirm login status
-        // then, we either move forward OR prompt the user to sign in
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                console.log("✅ Already signed in:", user.uid);
-                setCheckingAuth(false);
-            } else {
-                const provider = new GoogleAuthProvider();
-                signInWithRedirect(auth, provider);
-            }
+            if (user) setUser(user);
         });
-
         return () => unsubscribe();
     }, []);
 
-    // output the UID after a user is prompted to sign in
-    useEffect(() => {
-        getRedirectResult(auth)
-            .then((result) => {
-                if (result?.user) {
-                    console.log(
-                        "✅ User just signed in:",
-                        result.user.uid
-                    );
-                }
-            })
-            .catch((error) => {
-                console.error(
-                    "❌ Redirect error:",
-                    error.code,
-                    error.message
-                );
-            });
-    }, []);
+    const handleLogin = async () => {
+        const provider = new GoogleAuthProvider();
 
-    if (checkingAuth) return null; // could return a loading screen here
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+        try {
+            if (isMobile) {
+                await signInWithRedirect(auth, provider);
+            } else {
+                await signInWithPopup(auth, provider);
+            }
+        } catch (error: any) {
+            console.error("❌ Login failed:", error.message);
+        }
+    };
+
+    if (!user) {
+        return (
+            <div className="focus-page">
+                <button
+                    onClick={handleLogin}
+                    className="todo-logout-button"
+                >
+                    Sign in with Google
+                </button>
+            </div>
+        );
+    }
 
     return (
         <div className="list-container">
