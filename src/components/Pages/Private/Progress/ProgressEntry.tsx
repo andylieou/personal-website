@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Progress.css";
 import { formatDate } from "./CreateEntry";
 import { db } from "../../../../firebase";

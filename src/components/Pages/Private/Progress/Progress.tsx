@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProgressEntry, { Entry } from "./ProgressEntry";
 import "./Progress.css";
 import { db } from "../../../../firebase";
-import { ref, push, set, onValue, DataSnapshot } from "firebase/database";
+import { ref, onValue, DataSnapshot } from "firebase/database";
 import CreateEntry from "./CreateEntry";
 
 const getBaseline = (sortBy: string): number => {
