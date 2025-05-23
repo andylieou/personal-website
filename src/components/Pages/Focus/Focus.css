@@ -23,11 +23,12 @@
     bottom: 40px;
     width: 200px;
     animation: moveRight 10s linear infinite;
+    pointer-events: none;
 }
 
 @keyframes moveRight {
     0% {
-        left: calc(100vw - 200px);
+        left: 100vw;
         bottom: 40px;
     }
 
@@ -78,6 +79,17 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.focus-page::webkit-scrollbar {
+    display: none;
 }
 
 .focus-login-button {

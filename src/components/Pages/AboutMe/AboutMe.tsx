@@ -8,12 +8,11 @@ const Background = () => {
             <p className="about-me-body">
                 I'm a recent graduate from the University of Texas at
                 Austin, where I earned my Bachelor's in Computer Science
-                with a certicate in Applied Statistical Modeling,
-                graduating with High Honors (GPA: 3.97). I’ve always been
-                drawn to the intersection of systems, machine learning, and
-                full stack development — whether it's building low-level
-                kernels, experimenting with neural networks, or crafting
-                modern web apps.
+                with a certicate in Applied Statistical Modeling, (GPA:
+                3.97). I’ve always been drawn to the intersection of
+                systems, machine learning, and full stack development —
+                whether it's building low-level kernels, experimenting with
+                neural networks, or crafting modern web apps.
             </p>
             <p className="about-me-body">
                 Before college, I graduated as valedictorian of my high
