@@ -5,3 +5,4 @@ export { NotFoundPage } from "./NotFoundPage";
 export { Projects } from "./Projects";
 export { Focus } from "./Focus";
 export { Lists } from "./Lists";
+export { Private } from "./Private";

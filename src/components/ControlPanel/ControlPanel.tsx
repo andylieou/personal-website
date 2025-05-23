@@ -15,6 +15,7 @@ import {
     Connect,
     Focus,
     Lists,
+    Private,
 } from "../Pages";
 
 const Buttons = () => {
@@ -24,8 +25,6 @@ const Buttons = () => {
             style={{
                 display: "flex",
                 flexWrap: "wrap",
-                // gridTemplateColumns:
-                //     "repeat(auto-fit, minmax(200px, 1fr))",
                 gap: "16px",
                 padding: "16px",
                 justifyContent: "center",
@@ -36,6 +35,7 @@ const Buttons = () => {
             <ControlPanelButton title="Projects" page="/projects" />
             <ControlPanelButton title="Focus" page="/focus" />
             <ControlPanelButton title="Lists" page="/lists" />
+            <ControlPanelButton title="Private" page="/private" />
             <ControlPanelButton title="Connect" page="/connect" />
         </div>
     );
@@ -54,6 +54,7 @@ const Panel = () => {
                 <Route path="/projects" element={<Projects />}></Route>
                 <Route path="/focus" element={<Focus />}></Route>
                 <Route path="/lists" element={<Lists />}></Route>
+                <Route path="/private" element={<Private />}></Route>
                 <Route path="/connect" element={<Connect />}></Route>
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>

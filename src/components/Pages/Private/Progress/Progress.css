@@ -1,0 +1,110 @@
+.progress-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px;
+}
+
+.progress-input {
+    color: black;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
+.progress-input::placeholder {
+    opacity: 0.5;
+}
+
+.progress-button {
+    color: black;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 16px;
+    width: 200px;
+}
+
+.progress-button:disabled {
+    cursor: not-allowed;
+}
+
+.progress-button:hover {
+    border: 2px solid black;
+}
+
+.progress-container {
+    border: 1px solid black;
+    border-radius: 16px;
+    width: 100%;
+    height: 50vh;
+    /* display: flex;
+    flex-direction: row;
+    align-items: flex-end; */
+    position: relative;
+}
+
+.progress-entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-hidden-text {
+    display: none;
+    position: absolute;
+    top: -24px;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.progress-entry:hover .progress-hidden-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-text {
+    color: black;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+}
+
+.progress-sort-button {
+    color: black;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    font-family: monospace;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 16px;
+    width: 200px;
+}
+
+.progress-sort-button:hover {
+    border: 2px solid black;
+}
+
+.progress-sort-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 8px;
+    margin: 8px;
+}
