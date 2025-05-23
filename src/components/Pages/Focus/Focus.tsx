@@ -71,7 +71,7 @@ const Focus = () => {
                             onClick={handleLogin}
                             className="focus-login-button"
                         >
-                            Sign in with Google to create To-Do List
+                            Sign in with Google to create a To-Do List
                         </button>
                     </div>
                 )}
