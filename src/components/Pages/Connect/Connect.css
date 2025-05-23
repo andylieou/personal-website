@@ -31,3 +31,11 @@
     padding: 8px;
     font-family: monospace;
 }
+
+.connect-page {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 64px;
+    justify-content: center;
+}
