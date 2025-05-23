@@ -84,7 +84,8 @@
     -ms-overflow-style: none;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
