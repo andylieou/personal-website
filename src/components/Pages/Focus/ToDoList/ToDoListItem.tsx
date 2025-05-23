@@ -4,8 +4,8 @@ import { TypingAnimation } from "../../../Shared";
 
 interface ToDoListItemProps {
     task: Task;
-    onToggleDone: (id: number) => void;
-    onDelete: (id: number) => void;
+    onToggleDone: (id: string) => void;
+    onDelete: (id: string) => void;
 }
 
 export const ToDoListItem = ({
@@ -82,7 +82,7 @@ export const CreateToDoListItem = ({
             <div className="todo-item">
                 {isEditing ? (
                     <input
-                        className="todo-item-text"
+                        className="todo-item-input"
                         type="text"
                         value={text}
                         autoFocus

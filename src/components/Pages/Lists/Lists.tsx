@@ -30,15 +30,24 @@ const Lists = () => {
     }, []);
 
     // output the UID after a user is prompted to sign in
-    getRedirectResult(auth)
-        .then((result) => {
-            if (result?.user) {
-                console.log("✅ User just signed in:", result.user.uid);
-            }
-        })
-        .catch((error) => {
-            console.error("❌ Redirect error:", error.code, error.message);
-        });
+    useEffect(() => {
+        getRedirectResult(auth)
+            .then((result) => {
+                if (result?.user) {
+                    console.log(
+                        "✅ User just signed in:",
+                        result.user.uid
+                    );
+                }
+            })
+            .catch((error) => {
+                console.error(
+                    "❌ Redirect error:",
+                    error.code,
+                    error.message
+                );
+            });
+    }, []);
 
     if (checkingAuth) return null; // could return a loading screen here
 

@@ -1,53 +1,96 @@
 import React, { useEffect, useState } from "react";
 import "./ToDoList.css";
+import { db, auth } from "../../../../firebase";
 import { ToDoListItem, CreateToDoListItem } from "./ToDoListItem";
+import {
+    ref,
+    remove,
+    push,
+    set,
+    onValue,
+    DataSnapshot,
+} from "firebase/database";
+import { signOut } from "firebase/auth";
 
 export type Task = {
-    id: number;
+    id: string;
     text: string;
-    done: boolean;
 };
 
 const ToDoList = () => {
-    const [tasks, setTasks] = useState<Task[]>(() => {
-        // check if we can reload from local storage
-        const saved = localStorage.getItem("todoListTasks");
-        return saved ? JSON.parse(saved) : [];
-    });
+    const [tasks, setTasks] = useState<Task[]>([]);
+
+    useEffect(() => {
+        if (!auth.currentUser) {
+            console.log("User is not signed in.");
+            return;
+        }
+
+        const thingsRef = ref(db, `todoList/${auth.currentUser.uid}`);
+
+        // onValue -> create a listener to get the existing items from the database
+        // unsubscribe -> turns off the listener after we use it
+        const unsubscribe = onValue(
+            thingsRef,
+            (snapshot: DataSnapshot) => {
+                const data = snapshot.val();
+                if (!data) {
+                    setTasks([]);
+                    return;
+                }
+                const result: Task[] = Object.entries(data).map(
+                    // mapping function that uses the key-value pairs from each entry
+                    ([key, value]) => {
+                        const item = value as Omit<Task, "id">; // this is an item, but it won't have an id
+                        return {
+                            id: key, // add the id
+                            ...item, // copy the rest of the item
+                        };
+                    }
+                );
+                setTasks(result);
+            }
+        );
+        return () => unsubscribe();
+    }, []);
 
     const [text, setText] = useState("Create new item...");
 
-    const toggleDone = (id: number) => {
-        setTasks((prev) =>
-            prev.map((task) =>
-                // if the id matches, copy all the fields except done (set it to true)
-                task.id === id ? { ...task, done: !task.done } : task
-            )
+    const deleteTask = (id: string) => {
+        if (!auth.currentUser) {
+            console.log("User is not signed in.");
+            return;
+        }
+        const itemRef = ref(db, `todoList/${auth.currentUser.uid}/${id}`);
+        remove(itemRef).catch((err) =>
+            console.error("Delete failed:", err)
         );
     };
 
-    const deleteTask = (id: number) => {
-        setTasks((prev) => prev.filter((task) => task.id !== id));
-    };
+    const createTask = () => {
+        if (!auth.currentUser) {
+            console.log("User is not signed in.");
+            return;
+        }
 
-    const createTask = (input: string) => {
-        if (input.trim() === "") return;
-
-        const newTask: Task = {
-            id: Date.now(),
-            text: input,
-            done: false,
+        const newRef = push(ref(db, `todoList/${auth.currentUser.uid}`));
+        const newTask = {
+            text: text,
         };
+        set(newRef, newTask).catch((err) => {
+            alert("You are not authorized to add items.");
+            console.error(err);
+        });
 
-        // copy the tasks array and append newTask
-        setTasks([...tasks, newTask]);
+        // not needed because we have a listenerl that's pulling from Firebase and updating setTasks
+        // setTasks([...tasks, newTask]);
     };
 
-    // save tasks to local storage
-    useEffect(() => {
-        localStorage.setItem("todoListTasks", JSON.stringify(tasks));
-        console.log("Saved Tasks");
-    }, [tasks]);
+    const handleLogout = () => {
+        signOut(auth).catch((error) => {
+            console.error("❌ Logout error:", error);
+        });
+    };
 
     return (
         <>
@@ -55,21 +98,27 @@ const ToDoList = () => {
                 <h2 className="todo-title">To-Do List</h2>
                 <div className="todo-divider" />
                 <div className="todo-item-container">
-                    <CreateToDoListItem
-                        text={text}
-                        setText={setText}
-                        createTask={createTask}
-                    />
-                    {tasks
-                        .filter((task) => !task.done)
-                        .map((task) => (
-                            <ToDoListItem
-                                key={task.id}
-                                task={task}
-                                onToggleDone={toggleDone}
-                                onDelete={deleteTask}
-                            />
-                        ))}
+                    <div className="todo-control-panel">
+                        <CreateToDoListItem
+                            text={text}
+                            setText={setText}
+                            createTask={createTask}
+                        />
+                        <button
+                            onClick={handleLogout}
+                            className="todo-logout-button"
+                        >
+                            Log Out
+                        </button>
+                    </div>
+                    {tasks.map((task) => (
+                        <ToDoListItem
+                            key={task.id}
+                            task={task}
+                            onToggleDone={deleteTask}
+                            onDelete={deleteTask}
+                        />
+                    ))}
                 </div>
             </div>
         </>
