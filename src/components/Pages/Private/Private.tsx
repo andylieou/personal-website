@@ -66,6 +66,7 @@ const Private = () => {
             );
             try {
                 await signInWithRedirect(auth, provider);
+                window.location.reload();
             } catch (redirectErr: any) {
                 console.error(
                     "Redirect also failed:",
