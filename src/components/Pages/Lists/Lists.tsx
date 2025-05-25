@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { auth } from "../../../firebase";
 import {
     GoogleAuthProvider,
@@ -51,9 +51,14 @@ const Lists = () => {
         }
     };
 
+    const viewRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        viewRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, []);
+
     return (
         <>
-            <div className="list-container">
+            <div className="list-container" ref={viewRef}>
                 <ShoppingList list="clothes" title="Clothes" />
                 <ShoppingList list="electronics" title="Electronics" />
                 <ShoppingList list="kitchen" title="Kitchen" />
