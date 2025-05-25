@@ -90,7 +90,9 @@ const Progress = () => {
 
     return (
         <>
-            <h2 className="progress-text" ref={viewRef}>Health Tracker</h2>
+            <h2 className="progress-text" ref={viewRef}>
+                Health Tracker
+            </h2>
             <div className="progress-container">
                 {desiredEntries.map((entry) => {
                     const daysSinceStart = Math.floor(
