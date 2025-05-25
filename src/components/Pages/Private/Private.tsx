@@ -58,6 +58,7 @@ const Private = () => {
 
         try {
             await signInWithPopup(auth, provider);
+            window.location.reload();
         } catch (err: any) {
             console.warn(
                 "Popup failed, falling back to redirect:",
