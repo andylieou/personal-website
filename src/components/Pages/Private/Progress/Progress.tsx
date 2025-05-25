@@ -20,7 +20,7 @@ const getScaleFactor = (sortBy: string): number => {
     if (sortBy === "weight") {
         return 30;
     } else if (sortBy === "calories") {
-        return 2;
+        return 0.5;
     } else if (sortBy === "steps") {
         return 0.2;
     }
@@ -74,7 +74,7 @@ const Progress = () => {
         .slice(-number);
 
     const earliestDate = Math.min(...desiredEntries.map((e) => e.date));
-    const pixelsPerDay = 30;
+    const pixelsPerDay = 20;
     const scaleFactor = getScaleFactor(sortBy);
     const values = desiredEntries.map((entry) => getTop(sortBy, entry));
     const maxValue = Math.max(...values);
