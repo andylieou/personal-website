@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ProgressEntry, { Entry } from "./ProgressEntry";
 import "./Progress.css";
 import { db } from "../../../../firebase";
@@ -43,6 +43,11 @@ const Progress = () => {
     const [entries, setEntries] = useState<Entry[]>([]);
     const [number, setNumber] = useState<number>(30);
 
+    const viewRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        viewRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, []);
+
     useEffect(() => {
         const thingsRef = ref(db, "private");
         const unsubscribe = onValue(
@@ -85,7 +90,7 @@ const Progress = () => {
 
     return (
         <>
-            <h2 className="progress-text">Health Tracker</h2>
+            <h2 className="progress-text" ref={viewRef}>Health Tracker</h2>
             <div className="progress-container">
                 {desiredEntries.map((entry) => {
                     const daysSinceStart = Math.floor(
