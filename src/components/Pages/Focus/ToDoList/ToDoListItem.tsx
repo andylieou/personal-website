@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Task } from "./ToDoList";
 import { TypingAnimation } from "../../../Shared";
+import { db, auth } from "../../../../firebase";
+import { ref, set } from "firebase/database";
 
 interface ToDoListItemProps {
     task: Task;
@@ -13,10 +15,48 @@ export const ToDoListItem = ({
     onToggleDone,
     onDelete,
 }: ToDoListItemProps) => {
+    const [editing, setEditing] = useState(false);
+    const [text, setText] = useState(task.text);
+
+    const handleUpdate = () => {
+        if (!auth.currentUser) return;
+        const taskRef = ref(
+            db,
+            `todoList/${auth.currentUser.uid}/${task.id}`
+        );
+        set(taskRef, { text }).catch((err) => {
+            alert("update failed");
+            console.error(err);
+        });
+        setEditing(false);
+    };
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            handleUpdate();
+        }
+    };
+
     return (
         <>
             <div className="todo-item">
-                <p className="todo-item-text">{task.text}</p>
+                {editing ? (
+                    <input
+                        className="todo-item-input"
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
+                        onBlur={handleUpdate}
+                        onKeyDown={handleKeyDown}
+                        autoFocus
+                    />
+                ) : (
+                    <p
+                        className="todo-item-text"
+                        onDoubleClick={() => setEditing(true)}
+                    >
+                        {task.text}
+                    </p>
+                )}
                 <div className="todo-item-button-container">
                     <img
                         src="/done.png"
