@@ -26,9 +26,19 @@
 
 .text-box {
     border: 1px solid rgba(0, 0, 0, 0.256);
-    max-width: 30vw;
     padding: 8px;
-    min-width: 450px;
+    min-width: 300px;
+    max-width: 400px;
+    flex: 1 1 300px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .text-box {
+        min-width: unset;
+        max-width: 90vw;
+    }
 }
 
 .text-divider {

@@ -132,6 +132,7 @@ const AboutMe = () => {
                     justifyContent: "center",
                     gap: "16px",
                     padding: "16px",
+                    width: "100%",
                 }}
             >
                 <Text
