@@ -10,7 +10,6 @@
     perspective: 1000px;
     cursor: pointer;
     font-family: monospace;
-    margin: 16px;
 }
 
 .project-card-container {
@@ -36,6 +35,13 @@
         max-width: 100%;
         margin: 12px auto;
     }
+
+    .project-card-front,
+    .project-card-back,
+    .project-card-inner {
+        height: auto;
+        min-height: 700px;
+    }
 }
 
 .project-card-inner {
@@ -45,6 +51,7 @@
     /* flip over 0.6s while preserving both the front and back in 3D space */
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    /* min-height: 700px; */
 }
 
 .project-card-inner.flipped {
