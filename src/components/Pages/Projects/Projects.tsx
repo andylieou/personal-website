@@ -17,9 +17,7 @@ import {
 const Projects = () => {
     return (
         <>
-            <div
-                className="project-page"
-            >
+            <div className="project-page">
                 <ProjectCard
                     title="x86-32 Kernel"
                     body={<Kernel />}
