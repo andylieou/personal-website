@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const Pacman = () => {
     return (
@@ -16,7 +17,7 @@ const Pacman = () => {
             <img
                 src="/pacman.png"
                 alt="pacman board"
-                style={{ width: "500px" }}
+                className="project-card-image"
             ></img>
         </>
     );

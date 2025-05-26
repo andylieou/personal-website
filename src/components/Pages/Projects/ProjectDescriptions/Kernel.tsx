@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const Kernel = () => {
     return (
@@ -15,7 +16,7 @@ const Kernel = () => {
             <img
                 src="/kernel.png"
                 alt="user and kernel mode diagram"
-                style={{ width: "500px" }}
+                className="project-card-image"
             ></img>
         </>
     );

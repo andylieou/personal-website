@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const PuppyChat = () => {
     return (
@@ -19,7 +20,7 @@ const PuppyChat = () => {
             <img
                 src="/milo-chat.png"
                 alt="example milo chat"
-                style={{ width: "400px" }}
+                className="project-card-image"
             ></img>
         </>
     );

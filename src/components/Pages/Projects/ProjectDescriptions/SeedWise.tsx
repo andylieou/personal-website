@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const SeedWise = () => {
     return (
@@ -15,7 +16,7 @@ const SeedWise = () => {
             <img
                 src="/seedwise.png"
                 alt="seedwise example"
-                style={{ width: "250px" }}
+                className="project-card-image"
             ></img>
         </>
     );

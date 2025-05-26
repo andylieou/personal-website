@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const Memory = () => {
     return (
@@ -6,7 +7,7 @@ const Memory = () => {
             <p className="project-body">
                 Implemented a custom memory allocator in C as both a
                 reference solution and a lab assignment for students. Built
-                a naive version of `malloc` and `free` from scratch,
+                a naive version of malloc and free from scratch,
                 incorporating splitting, coalescing, heap extension, and
                 optional binning to manage free blocks efficiently. Used
                 headers, footers, and bit manipulation to handle allocation
@@ -21,7 +22,7 @@ const Memory = () => {
             <img
                 src="/memory.png"
                 alt="memory manager"
-                style={{ width: "500px" }}
+                className="project-card-image"
             ></img>
         </>
     );

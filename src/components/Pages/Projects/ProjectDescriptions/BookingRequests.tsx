@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const BookingRequests = () => {
     return (
@@ -16,7 +17,7 @@ const BookingRequests = () => {
             <img
                 src="/booking.png"
                 alt="vrbo logo"
-                style={{ width: "500px" }}
+                className="project-card-image"
             ></img>
         </>
     );

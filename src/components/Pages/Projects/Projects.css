@@ -1,8 +1,7 @@
 .project-card-container {
-    height: 50vh;
-    width: 45vw;
-    min-width: 800px;
-    min-height: 600px;
+    height: 70vh;
+    width: 100%;
+    max-width: 800px;
     align-items: center;
     justify-content: center;
     /* add depth to make the flip look 3D. this gives the card two 'sides' */
@@ -10,6 +9,14 @@
     cursor: pointer;
     font-family: monospace;
     margin: 16px;
+}
+
+@media (max-width: 600px) {
+    .project-card-container {
+        height: auto;
+        width: 90%;
+        margin: 12px auto;
+    }
 }
 
 .project-card-inner {
@@ -107,4 +114,31 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.project-body-text {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .project-body-text {
+        font-size: 14px;
+    }
+}
+
+.project-card-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .project-card-image {
+        max-height: 200px;
+    }
 }

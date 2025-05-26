@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const CNN = () => {
     return (
@@ -15,7 +16,11 @@ const CNN = () => {
             <div style={{ height: "20px" }} />
             <p className="project-body">PyTorch, Jupyter Notebook</p>
             <div style={{ height: "20px" }} />
-            <img src="/cnn.png" alt="cnn" style={{ width: "500px" }}></img>
+            <img
+                src="/cnn.png"
+                alt="cnn"
+                className="project-card-image"
+            ></img>
         </>
     );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const PersonalWebsite = () => {
     return (
@@ -12,12 +13,15 @@ const PersonalWebsite = () => {
                 maintainability and scalability.
             </p>
             <div style={{ height: "20px" }} />
-            <p className="project-body">React, TypeScript, HTML, CSS</p>
+            <p className="project-body">
+                React, TypeScript, HTML, CSS, Firebase
+            </p>
             <div style={{ height: "20px" }} />
             <img
                 src="/personal-website.png"
                 alt="website home page"
-                style={{ width: "400px", border: "1px black solid" }}
+                className="project-card-image"
+                style={{ border: "1px black solid" }}
             ></img>
         </>
     );

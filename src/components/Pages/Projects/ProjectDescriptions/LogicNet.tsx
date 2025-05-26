@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const LogicNet = () => {
     return (
@@ -15,7 +16,7 @@ const LogicNet = () => {
             <img
                 src="/logic-net.png"
                 alt="logic net architecture"
-                style={{ width: "400px" }}
+                className="project-card-image"
             ></img>
         </>
     );

@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 
 const Emulator = () => {
     return (
@@ -15,7 +16,7 @@ const Emulator = () => {
             <img
                 src="/emulator.png"
                 alt="architecture diagram"
-                style={{ width: "500px" }}
+                className="project-card-image"
             ></img>
         </>
     );
