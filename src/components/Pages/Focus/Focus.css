@@ -79,13 +79,12 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    overflow-x: auto;
+    overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
-html,
-body {
+body.no-x-scroll {
     overflow-x: hidden;
 }
 

@@ -45,6 +45,14 @@ const Focus = () => {
         }
     };
 
+    useEffect(() => {
+        document.body.classList.add("no-x-scroll");
+
+        return () => {
+            document.body.classList.remove("no-x-scroll");
+        };
+    }, []);
+
     return (
         <>
             <div className="focus-page">
