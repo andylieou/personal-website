@@ -18,13 +18,7 @@ const Projects = () => {
     return (
         <>
             <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns:
-                        "repeat(auto-fit, minmax(600px, 1fr))",
-                    gap: "16px",
-                    padding: "16px",
-                }}
+                className="project-page"
             >
                 <ProjectCard
                     title="x86-32 Kernel"
