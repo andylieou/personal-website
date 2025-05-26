@@ -1,11 +1,25 @@
 .project-card-container {
     height: 70vh;
     min-height: 700px;
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+    justify-content: center;
+    /* add depth to make the flip look 3D. this gives the card two 'sides' */
+    perspective: 1000px;
+    cursor: pointer;
+    font-family: monospace;
+    margin: 16px;
+}
+
+.project-card-container {
+    height: 70vh;
+    min-height: 700px;
     max-height: 900px;
     width: 100%;
     max-width: 800px;
     flex: 1 1 100%;
-    /* add depth to make the flip look 3D. this gives the card two 'sides' */
     perspective: 1000px;
     cursor: pointer;
     font-family: monospace;
@@ -18,8 +32,9 @@
 @media (max-width: 600px) {
     .project-card-container {
         height: auto;
-        min-height: unset;
-        max-height: unset;
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 12px auto;
     }
 }
 
