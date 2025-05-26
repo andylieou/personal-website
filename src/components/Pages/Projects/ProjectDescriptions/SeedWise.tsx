@@ -17,7 +17,7 @@ const SeedWise = () => {
                 src="/seedwise.png"
                 alt="seedwise example"
                 className="project-card-image"
-                style={{maxWidth: "300px"}}
+                style={{ maxWidth: "300px" }}
             ></img>
         </>
     );
