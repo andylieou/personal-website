@@ -47,7 +47,7 @@ const ProjectCard = ({
                 }`}
             >
                 <div className="project-card-front">
-                    <h2>{title}</h2>
+                    <h2 style={{ textAlign: "center" }}>{title}</h2>
                 </div>
                 <div className="project-card-back">
                     <div className="project-card-body">{body}</div>
