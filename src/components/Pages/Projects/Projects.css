@@ -3,7 +3,7 @@
     min-height: 800px;
     flex: 1 1 100%;
     width: 100%;
-    max-width: 800px;
+    max-width: 650px;
     align-items: center;
     justify-content: center;
     /* add depth to make the flip look 3D. this gives the card two 'sides' */
@@ -17,8 +17,8 @@
     min-height: 800px;
     max-height: 900px;
     width: 100%;
-    max-width: 800px;
     flex: 1 1 100%;
+    /* add depth to make the flip look 3D. this gives the card two 'sides' */
     perspective: 1000px;
     cursor: pointer;
     font-family: monospace;
