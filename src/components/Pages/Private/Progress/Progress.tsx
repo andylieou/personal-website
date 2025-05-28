@@ -22,7 +22,7 @@ const getScaleFactor = (sortBy: string): number => {
     } else if (sortBy === "calories") {
         return 0.5;
     } else if (sortBy === "steps") {
-        return 0.2;
+        return 0.05;
     }
     return 0;
 };
