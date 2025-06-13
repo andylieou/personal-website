@@ -41,7 +41,7 @@ const getTop = (sortBy: string, entry: Entry): number => {
 const Progress = () => {
     const [sortBy, setSortBy] = useState<string>("steps");
     const [entries, setEntries] = useState<Entry[]>([]);
-    const [number, setNumber] = useState<number>(30);
+    const [number, setNumber] = useState<number>(10);
 
     const viewRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
